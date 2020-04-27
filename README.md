@@ -140,7 +140,7 @@ Le script sera ici lancé dans le terminal Konsole de KDE. La variable d'environ
 La ligne suivante permet de faire une double substitution de variable en bash :
 
 ```
-eval "url=\${${article}}"
+url="${!article}"
 ```
 
 Voir https://unix.stackexchange.com/questions/68042/double-and-triple-substitution-in-bash-and-zsh

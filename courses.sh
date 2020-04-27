@@ -2,7 +2,7 @@
 # Script pour surveiller les sites de courses
 # Vincent MAGNIN, 22 mars 2020
 # Licence GNU GPL v3
-# Dernière modification le 23-04-2020
+# Dernière modification le 27-04-2020
 #
 # Paramètres du script :
 # ${1}    Enseigne à surveiller
@@ -103,7 +103,7 @@ do
     nb_articles=0
     for article in ${liste_articles} ; do
         # On récupère le contenu de la variable dont le nom est dans article :
-        eval "url=\${${article}}"
+        url="${!article}"
 
         echo -en "\n>>> Recherche ${article} : "
 
