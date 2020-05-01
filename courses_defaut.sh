@@ -2,7 +2,7 @@
 # Paramètres pour le site de courses
 # Vincent MAGNIN, 22 mars 2020
 # Licence GNU GPL v3
-# Dernière modification le 24-04-2020
+# Dernière modification le 01-05-2020
 
 # Intervalle en minutes entre les recherches :
 readonly intervalle=15
@@ -14,7 +14,8 @@ readonly courriel='prenom.nom@fai.fr'
 # URL et cookie d'identification du site de courses à surveiller :
 readonly url_site='https://www.houra.fr/'
 readonly url_reservation_creneau='https://www.houra.fr/com/reservation_creneau.php'
-readonly cookie='Cookie: ID=blablablablablabla'
+readonly cookie_creneaux='Cookie: ID=blablablablablabla'
+readonly cookie_articles='Cookie: ID=blablablablablabla'
 
 # URL de l'éventuelle commande en cours :
 readonly commande_en_cours='https://www.houra.fr/cpt/index.php?c=commandes-en-cours&id_commande=blablablabla'

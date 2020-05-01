@@ -2,7 +2,7 @@
 # Script pour surveiller les sites de courses
 # Vincent MAGNIN, 22 mars 2020
 # Licence GNU GPL v3
-# Dernière modification le 27-04-2020
+# Dernière modification le 01-05-2020
 #
 # Paramètres du script :
 # ${1}    Enseigne à surveiller
@@ -94,7 +94,7 @@ do
     # Recherche de créneaux horaires :
     if [ "${surveiller_creneaux}" = true ] ; then
         echo -en "\n>>> Recherche créneaux ${enseigne} : "
-        if chercher_curl "${chaine_creneau_disponible}" "${url_site}" "${cookie}" ; then
+        if chercher_curl "${chaine_creneau_disponible}" "${url_site}" "${cookie_creneaux}" ; then
             alerter "${url_reservation_creneau}" "Créneau ${enseigne} !" 10
         fi
     fi
@@ -107,7 +107,7 @@ do
 
         echo -en "\n>>> Recherche ${article} : "
 
-        if chercher_curl "${chaine_article_disponible}" "${url}" "${cookie}" ; then
+        if chercher_curl "${chaine_article_disponible}" "${url}" "${cookie_articles}" ; then
             if [ ${nb_articles} -eq 0 ]; then
                 # On ouvre la (les) commande(s) en cours. Pas de guillemets ici
                 # afin de pouvoir ouvrir éventuellement plusieurs commandes :
